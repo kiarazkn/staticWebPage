@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(125deg, #16264e, #226d9c, #22a6b3, #40739e, #574b90, #30336b);
+	background-size: 400%;
+	animation: bganimation 12s infinite;
+}
+body::-webkit-scrollbar{
+	display: none;
+}
+.bg {
+	margin: 50%;
+}
+
+@keyframes bganimation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.logo{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	height: 50px;
+	padding: 3px;
+	color: #fff;
+	font-size: 60px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+}
+
+.section{
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	transform: translate(0, 0);
+	width: 60%;
+	height: 50%;
+	background-color: #FFFFFF;
+}
+
+.inputbox input{
+	position: absolute;
+	top: 50%;
+	left: 24%;
+	width: 50%;
+	height: 50px;
+	padding: 10px;
+	font-size: 30px;
+	font-family: "微软雅黑";
+	color: #226D9C;
+	letter-spacing: 2px;
+	border: 5px solid #22A6B3;
+	outline: none;
+	background: transparent;
+	
+	}
+
+.button{
+	text-decoration: none;
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	width: 400px;
+	height: 100px;
+	color: white;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50px;
+	z-index: 1;
+}
+.button:before{
+	content: "";
+	position: absolute;
+	left: -5px;
+	right: -5px;
+	top: -5px;
+	bottom: -5px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border-radius: 50px;
+	filter: blur(20px);
+	z-index: -1;
+}
+.button:hover::before{
+	animation: sun 8s infinite;
+}
+.button:hover{
+	animation: sun 8s infinite;
+}
+@keyframes sun{
+	100%{
+		background-position: -400% 0;
+	}
+}
+
+.nav_left{
+	position: fixed;
+	top: 30%;
+	left: -2%;
+	width: 250px;
+	height: 350px;
+	border: 5px solid #A6C1EE;
+	border-radius: 10%;
+}
+.nav_left ul{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	margin: 0;
+	padding: 0;
+}
+.nav_left ul li{
+	list-style: none;
+	height: 80px;
+}
+.nav_left ul li a{
+	position: relative;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 60px;
+	display: block;
+	font-size: 25px;
+	width: 100px;
+	
+}
+.nav_left ul li a:hover{
+	color: #00D2D3;
+	border-bottom: 5px solid #00D2D3;
+}

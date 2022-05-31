@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ISLAND</title>
+    <link rel="stylesheet" href="css/island.css" >
+</head>
+
+<body>
+
+	<embed src="media/昙轩%20-%20海の形.mp3" hidden="true" autostart="true" loop="true"></embed>
+    <section>
+        <img src="img/bg.jpg"id="bg" >
+        <img src="img/moon.png" id="moon" >
+        
+		<img src="img/mountain.png" id="mountain">
+        
+		<img src="img/road.png" id="road" >
+        
+		<h2 id="text">ISLAND</h2>
+    </section>
+    <script>
+        let bg = document.querySelector('#bg')
+        let moon = document.querySelector('#moon')
+        let mountain = document.querySelector('#mountain')
+        let road = document.querySelector('#road')
+        let text = document.querySelector('#text')
+
+        window.addEventListener('scroll', () => {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+
+	<div class="nav">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="webs/About.html">About</a></li>
+		<li><a href="webs/Chat.html">Chat</a></li>
+		<li><a href="webs/Register.html">Register</a></li>
+		<li><a href="webs/Login.html">Login</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="text">
+		<p>ISLAND是一个线上匹配交友聊天平台。在这里，您可以通过关键词匹配的方式寻找您的聊天对象。我们会保存您输入的关键词24小时以便为您匹配最佳对象，您亦可随时取消或修改输入的关键词。</p>
+		<p>ps:当您输入的关键词无法匹配到完全一致的用户时，我们将把匹配对象范围进行一定的扩大，包括但不限于相近或类似的关键词。</p>
+		
+	</div>
+	<div class="start"><a href="webs/Chat.html">开始体验</a></div>
+</body>
+
+</html>
